@@ -1,0 +1,367 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #f9f9f9;
+    color: #333;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: linear-gradient(90deg, #2196f3, #42a5f5);
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-brand {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 30px;
+    color: white;
+}
+
+/* Side Menu */
+.side-menu {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #333;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 60px;
+}
+
+.side-menu .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 30px;
+    color: #fff;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.side-menu .menu-list {
+    list-style: none;
+    padding: 0;
+}
+
+.side-menu .menu-list li {
+    padding: 10px 20px;
+}
+
+.side-menu .menu-list li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #fff;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.side-menu .menu-list li a:hover {
+    background-color: #575757;
+}
+
+/* Sections */
+.section {
+    display: none;
+    padding: 60px 20px;
+    margin-top: 50px;
+}
+
+.section.active {
+    display: block;
+}
+
+/* Schedule */
+.schedule {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.schedule .day {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2196f3;
+    color: white;
+    padding: 10px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.schedule .matches {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 10px 0;
+}
+
+.schedule .match {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.schedule .match span {
+    margin: 0 10px;
+}
+
+/* Past Matches */
+.matches {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.matches .match {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.matches .match span {
+    margin: 0 10px;
+}
+
+.matches .result {
+    font-weight: bold;
+    color: #2196f3;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* Scores */
+.scores {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 10px 0;
+}
+
+.scores .score {
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.scores .score span {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-brand {
+        font-size: 16px;
+    }
+
+    .menu-toggle {
+        font-size: 28px;
+    }
+}
+
+
+/* Schedule matches - more complex design */
+.schedule .match {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background: #e3f2fd;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.schedule .match span {
+    margin: 0 10px;
+}
+
+.schedule .match div {
+    width: 40%;
+    text-align: center;
+    font-size: 18px;
+}
+
+/* Past matches with results */
+.matches .match {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    background: #f3f4f6;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 10px 0;
+}
+
+.matches .match .result {
+    font-size: 14px;
+    color: #2196f3;
+    text-align: center;
+    padding: 5px;
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+
+.matches .match .team {
+    width: 45%;
+    text-align: center;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+/* Scores section - enhanced design */
+.scores .score {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background: #f3f4f6;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.scores .score .ball {
+    font-size: 20px;
+    font-weight: bold;
+    color: #2196f3;
+    background: #ffffff;
+    padding: 5px 10px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+    .schedule .match, .matches .match, .scores .score {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .schedule .match div, .matches .match .team {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
+
+
+/* About Section */
+#about {
+    padding: 40px 20px;
+    background-color: #f4f7fc;
+    text-align: center;
+}
+
+#about h1 {
+    font-size: 36px;
+    color: #2196f3;
+    margin-bottom: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* About Content */
+.about-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Author Image */
+.author-image {
+    flex: 1;
+    max-width: 250px;
+}
+
+.author-photo {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.author-photo:hover {
+    transform: scale(1.05);
+}
+
+/* Author Description */
+.author-description {
+    flex: 2;
+    max-width: 600px;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.author-description p {
+    margin-bottom: 20px;
+}
+
+.author-description p strong {
+    font-weight: bold;
+    color: #2196f3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .author-photo {
+        max-width: 200px;
+    }
+
+    .author-description {
+        font-size: 16px;
+    }
+}

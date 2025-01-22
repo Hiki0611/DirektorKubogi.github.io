@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Direktor Kubogi</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <button class="menu-toggle" onclick="toggleMenu()">
+            &#9776; <!-- Hamburger icon -->
+        </button>
+        <div class="nav-brand">Direktor<br>Kubogi</div>
+    </nav>
+
+    <!-- Side Menu -->
+    <aside id="sideMenu" class="side-menu">
+        <button class="close-btn" onclick="toggleMenu()">×</button>
+        <ul class="menu-list">
+            <li><a href="#schedule" onclick="showSection('schedule')">O’yinlar tartibi</a></li>
+            <li><a href="#past-matches" onclick="showSection('past-matches')">O’tgan Matchlar</a></li>
+            <li><a href="#scores" onclick="showSection('scores')">Jamoalar Ballari</a></li>
+            <li><a href="#about" onclick="showSection('about')">Muallif Haqida</a></li>
+        </ul>
+    </aside>
+
+    <!-- Content -->
+    <main>
+        <section id="schedule" class="section active">
+            <h1>O’yinlar tartibi</h1>
+            <div class="schedule"></div>
+        </section>
+        <section id="past-matches" class="section">
+            <h1>O’tgan Matchlar</h1>
+            <div class="matches"></div>
+        </section>
+        <section id="scores" class="section">
+            <h1>Jamoalar Ballari</h1>
+            <div class="scores"></div>
+        </section>
+        <section id="about" class="section">
+            <h1>Dastur Muallifi Haqida</h1>
+            <div class="about-content">
+                <div class="author-image">
+                    <img src="author.jpg" alt="Author Image" class="author-photo">
+                </div>
+                <div class="author-description">
+                    <p>Ushbu dastur texnikumning Gofurjonov Hikmatullo 3-24 guruh talabalasi tomonidan yaratilgan! Muallif doimiy ravishda yangi g'oyalar va innovatsiyalarni izlaydi.</p>
+                    <p>Muallif saytni yaratishda samarali va zamonaviy texnologiyalarni ishlatdi, bu esa foydalanuvchilarga qulay va tezkor tajriba taqdim etadi.</p>
+                    <p><strong>Muallif telefon raqami:</strong>+998 99 141 98 36</p>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
